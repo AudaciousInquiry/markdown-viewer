@@ -26,7 +26,8 @@ var mmd = (() => {
 
       var diagrams = Array.from(document.querySelectorAll('code.mermaid'))
       var timeout = setInterval(() => {
-        var svg = Array.from(document.querySelectorAll('pre code.mermaid svg'))
+        // Direct children only, see the matching note in scroll.js
+        var svg = Array.from(document.querySelectorAll('pre code.mermaid > svg'))
         if (diagrams.length === svg.length) {
           clearInterval(timeout)
           svg.forEach((diagram) => {
