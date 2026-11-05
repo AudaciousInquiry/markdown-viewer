@@ -20,7 +20,8 @@ var mmd = (() => {
         (state._themes[state.theme] === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches)
         ? 'dark' : 'default'
       mermaid.initialize({theme})
-      mermaid.init({theme}, 'code.mermaid')
+      // mermaid.init is deprecated since v10 and scheduled for removal in v13
+      mermaid.run({querySelector: 'code.mermaid'})
       loaded = true
 
       var diagrams = Array.from(document.querySelectorAll('code.mermaid'))
