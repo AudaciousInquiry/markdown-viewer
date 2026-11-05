@@ -61,10 +61,12 @@
       ],
       "resources": [
         "/content/anchor.svg",
+        "/gallery/index.html",
         "/icons/default/16x16.png",
         "/icons/dark/16x16.png",
         "/icons/light/16x16.png",
         "/themes/*",
+        "/vendor/aws-icons.json",
         "/vendor/mathjax/fonts/*",
         "/vendor/prism.min.css",
         "/vendor/prism-okaidia.min.css"

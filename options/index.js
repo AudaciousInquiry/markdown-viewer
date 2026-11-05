@@ -25,6 +25,9 @@ document.querySelector('.nav').addEventListener('click', (e) => {
     document.querySelector('.m-settings').classList.remove('hidden')
     e.target.classList.add('active')
   }
+  else if (e.target.innerText === 'AWS Icons') {
+    window.location = '/gallery/index.html'
+  }
   else if (e.target.innerText === 'Help') {
     window.location = 'https://github.com/simov/markdown-viewer#table-of-contents'
   }

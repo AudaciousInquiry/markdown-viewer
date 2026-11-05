@@ -1,0 +1,244 @@
+
+main {
+  padding-bottom: 3rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* intro ------------------------------------------------------------------ */
+
+.g-intro {
+  margin: 1.5rem 0 2rem;
+}
+
+.g-intro h4,
+.g-missing h4 {
+  margin-bottom: .75rem;
+}
+
+.g-example {
+  background: #f6f8fa;
+  border: 1px solid #d8dee4;
+  border-radius: 6px;
+  padding: .85rem 1rem;
+  overflow-x: auto;
+  font-size: .85rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.g-example code {
+  color: #24292f;
+  white-space: pre;
+}
+
+.g-note {
+  color: #656d76;
+  font-size: .875rem;
+}
+
+/* controls --------------------------------------------------------------- */
+
+.g-controls {
+  position: sticky;
+  top: 56px;
+  z-index: 10;
+  background: #fff;
+  padding: 1rem 0 .75rem;
+  border-bottom: 1px solid #d8dee4;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  align-items: center;
+}
+
+.g-controls input[type=search] {
+  flex: 1 1 18rem;
+  min-width: 12rem;
+}
+
+.g-families {
+  display: flex;
+  gap: .25rem;
+  flex-wrap: wrap;
+}
+
+.g-family {
+  border: 1px solid #d8dee4;
+  background: #f6f8fa;
+  border-radius: 2rem;
+  padding: .3rem .85rem;
+  font-size: .8rem;
+  cursor: pointer;
+  color: #24292f;
+}
+
+.g-family:hover {
+  background: #eaeef2;
+}
+
+.g-family.active {
+  background: #0969da;
+  border-color: #0969da;
+  color: #fff;
+}
+
+.g-dark {
+  font-size: .8rem;
+  color: #656d76;
+  display: flex;
+  align-items: center;
+  gap: .35rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.g-count {
+  color: #656d76;
+  font-size: .8rem;
+  margin: .85rem 0 .5rem;
+}
+
+/* grid ------------------------------------------------------------------- */
+
+.g-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr));
+  gap: .5rem;
+}
+
+.g-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .4rem;
+  padding: .85rem .4rem .6rem;
+  border: 1px solid #d8dee4;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  text-align: center;
+  overflow: hidden;
+}
+
+.g-card:hover {
+  border-color: #0969da;
+  background: #f6f8fa;
+}
+
+.g-card:active {
+  background: #eaeef2;
+}
+
+.g-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+}
+
+.g-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.g-name {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: .7rem;
+  line-height: 1.25;
+  color: #24292f;
+  word-break: break-word;
+}
+
+.g-alias {
+  font-size: .65rem;
+  color: #8c959f;
+  word-break: break-word;
+}
+
+/* dark preview ----------------------------------------------------------- */
+/* AWS ships _Dark variants for use on dark backgrounds. This toggle only
+   changes the card background so those variants can be judged in context. */
+
+body.g-dark-preview .g-card {
+  background: #22272e;
+  border-color: #444c56;
+}
+
+body.g-dark-preview .g-card:hover {
+  background: #2d333b;
+}
+
+body.g-dark-preview .g-name {
+  color: #adbac7;
+}
+
+/* empty / missing -------------------------------------------------------- */
+
+.g-empty,
+.g-missing {
+  padding: 2.5rem 0;
+  text-align: center;
+}
+
+.g-missing {
+  text-align: left;
+  max-width: 44rem;
+}
+
+/* toast ------------------------------------------------------------------ */
+
+.g-toast {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #24292f;
+  color: #fff;
+  padding: .55rem 1.1rem;
+  border-radius: 6px;
+  font-size: .85rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  z-index: 100;
+  pointer-events: none;
+}
+
+/* extension dark theme --------------------------------------------------- */
+
+body.dark .g-controls {
+  background: #22272e;
+  border-bottom-color: #444c56;
+}
+
+body.dark .g-example {
+  background: #2d333b;
+  border-color: #444c56;
+}
+
+body.dark .g-example code {
+  color: #adbac7;
+}
+
+body.dark .g-card {
+  background: #22272e;
+  border-color: #444c56;
+}
+
+body.dark .g-name {
+  color: #adbac7;
+}
+
+body.dark .g-family {
+  background: #2d333b;
+  border-color: #444c56;
+  color: #adbac7;
+}
+
+body.dark .g-family.active {
+  background: #316dca;
+  border-color: #316dca;
+  color: #fff;
+}

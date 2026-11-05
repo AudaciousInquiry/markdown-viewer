@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AWS Icons &bull; Markdown Viewer</title>
+  <link href="/vendor/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="/options/index.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="/gallery/index.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+  <div id="wrapper">
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a href="/options/index.html" class="navbar-brand">Markdown Viewer</a>
+        <ul class="nav nav-underline">
+          <li class="nav-item"><a href="/options/index.html" class="nav-link">Options</a></li>
+          <li class="nav-item"><a href="#" class="nav-link active">AWS Icons</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <main>
+
+        <section class="g-intro">
+          <h4>Using AWS icons in Mermaid</h4>
+          <p>
+            Reference an icon as <code>aws:<em>name</em></code> inside an
+            <code>architecture-beta</code> diagram. Click any icon below to
+            copy its name.
+          </p>
+<pre class="g-example"><code>```mermaid
+architecture-beta
+    group vpc(aws:group-vpc)[Production VPC]
+
+    service web(aws:ec2)[Web Tier] in vpc
+    service api(aws:lambda)[API] in vpc
+    service db(aws:rds)[Database] in vpc
+    service store(aws:s3)[Object Store]
+
+    web:R --&gt; L:api
+    api:R --&gt; L:db
+    api:B --&gt; T:store
+```</code></pre>
+          <p class="g-note">
+            Icons only render in <code>architecture-beta</code> diagrams.
+            Other diagram types have no icon slot. Names are matched exactly
+            and are always lower case.
+          </p>
+        </section>
+
+        <section class="g-controls">
+          <input type="search" id="g-search" class="form-control"
+                 placeholder="Search 0 icons by name or alias&hellip;"
+                 autocomplete="off" spellcheck="false" />
+          <div class="g-families" id="g-families"></div>
+          <label class="g-dark">
+            <input type="checkbox" id="g-dark" /> Dark preview
+          </label>
+        </section>
+
+        <p class="g-count" id="g-count"></p>
+
+        <div class="g-grid" id="g-grid"></div>
+
+        <div class="g-empty hidden" id="g-empty">
+          <p>No icon matches that name.</p>
+          <p class="g-note">
+            Try a shorter word. Most services are filed under their product
+            name with <code>AWS-</code> and <code>Amazon-</code> removed, so
+            <code>Amazon CloudFront</code> is <code>aws:cloudfront</code>.
+          </p>
+        </div>
+
+        <div class="g-missing hidden" id="g-missing">
+          <h4>No icon pack is installed</h4>
+          <p>
+            The AWS Architecture Icons are not redistributed with this
+            extension. To install them, download the asset package from
+            <a href="https://aws.amazon.com/architecture/icons/">aws.amazon.com/architecture/icons</a>,
+            unpack it, and rebuild with <code>AWS_ICONS_DIR</code> pointing at
+            the unpacked folder:
+          </p>
+<pre class="g-example"><code>AWS_ICONS_DIR=/path/to/asset-package sh build/package.sh chrome</code></pre>
+        </div>
+
+      </main>
+    </div>
+    <div id="footer-push">&nbsp;</div>
+  </div>
+
+  <div class="g-toast hidden" id="g-toast"></div>
+
+</body>
+<script src="/gallery/index.js" type="text/javascript" charset="utf-8"></script>
+</html>

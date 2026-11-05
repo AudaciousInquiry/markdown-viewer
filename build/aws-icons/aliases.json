@@ -1,0 +1,79 @@
+{
+  "_comment": [
+    "Hand-curated short names, mapped to the generated icon id they point at.",
+    "The generator already derives two names for every icon: the short form",
+    "(lambda) and the vendor-faithful form (aws-lambda, amazon-ec2). This file",
+    "covers the names people actually say out loud but that appear nowhere in",
+    "the AWS filenames: acronyms (s3, sqs, iam) and colloquial short forms",
+    "(beanstalk, firehose, route53).",
+    "",
+    "Any entry whose target does not exist is reported at build time and",
+    "skipped, so this file degrades safely across AWS asset-package releases."
+  ],
+
+  "s3": "simple-storage-service",
+  "glacier": "simple-storage-service-glacier",
+  "s3-glacier": "simple-storage-service-glacier",
+  "sqs": "simple-queue-service",
+  "sns": "simple-notification-service",
+  "ses": "simple-email-service",
+
+  "ddb": "dynamodb",
+  "elasticsearch": "opensearch-service",
+  "opensearch": "opensearch-service",
+  "quicksight": "quick",
+
+  "apigw": "api-gateway",
+  "apigateway": "api-gateway",
+  "alb": "elastic-load-balancing",
+  "nlb": "elastic-load-balancing",
+  "elb": "elastic-load-balancing",
+
+  "ebs": "elastic-block-store",
+  "ecr": "elastic-container-registry",
+  "ecs": "elastic-container-service",
+  "eks": "elastic-kubernetes-service",
+  "beanstalk": "elastic-beanstalk",
+  "asg": "ec2-auto-scaling",
+
+  "iam": "identity-and-access-management",
+  "kms": "key-management-service",
+  "acm": "certificate-manager",
+  "pca": "private-certificate-authority",
+  "ram": "resource-access-manager",
+  "sso": "iam-identity-center",
+
+  "vpc": "virtual-private-cloud",
+  "tgw": "transit-gateway",
+  "dx": "direct-connect",
+  "route53": "route-53",
+  "r53": "route-53",
+  "xray": "x-ray",
+
+  "cfn": "cloudformation",
+  "cdk": "cloud-development-kit",
+  "cli": "command-line-interface",
+  "ssm": "systems-manager",
+  "sfn": "step-functions",
+  "stepfunctions": "step-functions",
+
+  "dms": "database-migration-service",
+  "msk": "managed-streaming-for-apache-kafka",
+  "mwaa": "managed-workflows-for-apache-airflow",
+  "firehose": "data-firehose",
+  "kinesis-firehose": "data-firehose",
+  "databrew": "glue-databrew",
+
+  "iot": "iot-core",
+  "greengrass": "iot-greengrass",
+  "securityhub": "security-hub",
+  "controltower": "control-tower",
+  "secretsmanager": "secrets-manager",
+
+  "group-vpc": "group-virtual-private-cloud-vpc",
+  "group-account": "group-aws-account",
+  "group-cloud": "group-aws-cloud",
+  "group-asg": "group-auto-scaling-group",
+  "group-datacenter": "group-corporate-data-center",
+  "group-greengrass": "group-aws-iot-greengrass-deployment"
+}

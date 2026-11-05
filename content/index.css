@@ -340,6 +340,30 @@ svg[id^=mermaid] text {
   stroke: none !important;
 }
 
+/*mermaid unknown aws: icon hint*/
+.markdown-viewer-icon-hint {
+  margin: 0 0 .5rem;
+  padding: .55rem .8rem;
+  border: 1px solid #d4a72c;
+  border-left-width: .25rem;
+  border-radius: 6px;
+  background: #fff8c5;
+  color: #4d2d00;
+  font-size: .85rem;
+  line-height: 1.5;
+}
+.markdown-viewer-icon-hint a {
+  color: #0969da;
+}
+._color-dark .markdown-viewer-icon-hint {
+  border-color: #9e6a03;
+  background: #272115;
+  color: #d29922;
+}
+._color-dark .markdown-viewer-icon-hint a {
+  color: #4493f8;
+}
+
 /*emojione*/
 .emojione {
   /* Emoji Sizing */
