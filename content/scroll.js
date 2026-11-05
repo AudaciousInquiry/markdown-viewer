@@ -47,7 +47,11 @@ var scroll = (() => {
         }
         else {
           var timeout = setInterval(() => {
-            var svg = Array.from(document.querySelectorAll('code.mermaid svg'))
+            // Direct children only. Diagrams that embed icons, such as
+            // architecture-beta, nest an <svg> per icon inside the diagram's
+            // own <svg>, so a descendant selector counts far more than one
+            // per diagram and this never balances.
+            var svg = Array.from(document.querySelectorAll('code.mermaid > svg'))
             if (diagrams.length === svg.length) {
               clearInterval(timeout)
               resolve()
